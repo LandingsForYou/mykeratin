@@ -403,8 +403,6 @@ h1 {
 }
 
 .hero-media img {
-  transform: scale(1.2) translateX(40px);
-
   filter: drop-shadow(0 50px 100px rgba(81, 82, 68, 0.25)) contrast(1.08)
     brightness(1.05);
 }
