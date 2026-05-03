@@ -1951,6 +1951,7 @@ blockquote::after {
 
   .why-list {
     text-align: center;
+    max-width: auto;
   }
 
   .why-item {
@@ -2066,7 +2067,7 @@ blockquote::after {
 }
 
 .final-bottom {
-  padding: 140px 0;
+  padding: 60px 0 60px;
   text-align: center;
   position: relative;
 }
@@ -2109,6 +2110,7 @@ blockquote::after {
 @media (max-width: 998px) {
   .final {
     margin-top: 0 !important;
+    overflow: hidden;
   }
   .final-wrap {
     margin-bottom: 60px;
@@ -2139,6 +2141,13 @@ blockquote::after {
 
   .final-media img {
     transform: none;
-    max-height: 320px;
+    max-width: 320px;
   }
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+.final-bottom .btn {
+  margin: auto;
 }
