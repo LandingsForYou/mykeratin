@@ -428,11 +428,6 @@ h1 {
   animation-delay: 0.8s;
 }
 
-.hero-media img {
-  opacity: 0;
-  animation: fadeImg 1.2s 0.5s forwards;
-}
-
 @keyframes fade {
   to {
     opacity: 1;
