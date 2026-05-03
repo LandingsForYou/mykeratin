@@ -10,6 +10,16 @@ const open = document.querySelector(".open-modal");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
 
+const navLinks = document.querySelectorAll(".nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  });
+});
+
 open.onclick = () => modal.classList.add("active");
 close.onclick = () => modal.classList.remove("active");
 
@@ -57,3 +67,19 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(document.querySelector(".why-list"));
+
+const reveals = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 },
+);
+
+reveals.forEach((el) => revealObserver.observe(el));

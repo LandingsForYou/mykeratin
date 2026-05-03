@@ -555,6 +555,10 @@ h1 {
     max-height: 50vh;
     min-height: 50vh;
   }
+  .hero-wrap .hero-media img {
+    position: relative;
+    z-index: -1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2150,4 +2154,15 @@ blockquote::after {
 }
 .final-bottom .btn {
   margin: auto;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
